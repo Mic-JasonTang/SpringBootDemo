@@ -44,7 +44,7 @@ public class DataController {
         return people;
     }
 
-    @RequestMapping("/q2/{name1}")
+    @RequestMapping("/q2/{name}")
     public List<Person> q2(@PathVariable("name") String name) {
         System.out.println("DataController.q2");
         System.out.println("name = [" + name + "]");
