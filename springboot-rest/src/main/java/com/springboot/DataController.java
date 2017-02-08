@@ -16,7 +16,15 @@ import java.util.List;
  * SpringBootDemo
  * <p>
  * Created by yang.tang on 2017/2/6 17:00.
+ *
+ * 1.定制根路径，默认为/，修改定义的话，需要在application.properties 里面配置spring.data.rest.base-path= /xx
+ *
+ * 2.定制节点路径，节点路径为 实体类 + s ,也就是 localhost:8080/persons, 修改的话，
+ *   在实体类Repository 上使用@RepositoryRestResource 注解的path属性来修改。
+ *   比如：@RepositoryRestResource("/people")
+ *   访问路径为：localhost:8080/xx/people
  */
+
 @RestController
 public class DataController {
 

@@ -8,17 +8,11 @@ import javax.persistence.Id;
  * SpringBootDemo
  * <p>
  * Created by yang.tang on 2017/2/6 14:56.
- *
- * 没有使用@Table (实体类映射表名)，@Column (属性映射字段名) 注解。
- * 这是因为采用的是正向工程通过实体类生成表结构，而不是通过逆向工程从表结构生成实体类。
  */
-//@Entity 注解指明这是一个和数据库表映射的实体类
 @Entity
 public class Person {
 
-    //@Id 注解指明这个属性映射为数据库的主键
     @Id
-    //@GeneratedValue 注解默认使用主键的生成方式为自增
     @GeneratedValue
     private Integer id;
 
